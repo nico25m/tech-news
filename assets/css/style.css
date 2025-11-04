@@ -1,5 +1,9 @@
+* {
+  font-family: "Zalando Sans SemiExpanded", sans-serif;
+}
+
 body {
-  background-color: white;
+  background-color: #ffffff;
   margin: 0;
   padding: 0;
 }
@@ -13,40 +17,288 @@ body {
     "home"
     "news"
     "footer";
-  grid-template-rows: 100px 800px 800px 100px;
+  grid-template-rows: 130px 700px auto 130px;
+  justify-items: center;
 }
 
 .header {
   grid-area: header;
   width: 60%;
-  background-color: rgb(166, 255, 0);
+  background-color: #ffffff;
   display: flex;
-  margin: 20px;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  border-radius: 40px;
+  border-radius: 60px;
+  margin-top: 40px;
+  padding: 30px;
+  box-shadow: 2px 2px 15px 10px #b1b1b133;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  font-size: 15px;
+}
+
+.logo {
+  width: 65px;
+  height: auto;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  transition: 1s;
+}
+
+nav .menu:hover {
+  background-color: #e1ffb4;
+  cursor: pointer;
+  transform: translateY(-5px);
+  transition: 0.5s;
+}
+
+.header button {
+  height: 60px;
+  background-color: #bbfd57;
+  border-radius: 30px;
+  padding: 15px;
+  border: none;
+  box-shadow: 2px 2px 15px 5px #b1b1b133;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  transition: 1s;
+}
+
+.header button:hover {
+  transform: rotateY(360deg);
+  cursor: pointer;
+  background-color: #00000075;
+  color: #ffffff;
+  transition: 2s;
+}
+
+.header button span {
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  background-color: #ffffff81;
+}
+
+.header button img {
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff13;
+  margin-top: 10px;
 }
 
 #home {
-  width: 60%;
-  margin: 20px;
+  width: 80%;
   grid-area: home;
-  background-color: rgb(166, 255, 0);
+  background-color: #ffffff;
   border-radius: 30px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background-image: url("../img/sfondoHome.png");
+  background-size: cover;
+  box-shadow: 2px 2px 15px 10px #b1b1b133;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 50px;
+  padding: 20px;
+}
+
+.link-freccia{
+  text-decoration: none;
+}
+
+#home .col1 {
+  width: 40%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 40px;
+}
+
+.col1 h1 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.col1 mark {
+  background-color: #e1ffb4;
+  padding: 10px;
+}
+
+#home .col2 {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 18px;
+  text-align: left;
+  margin-right: 20px;
+}
+
+.col2 button {
+  width: 190px;
+  height: 60px;
+  background-color: #000000;
+  border-radius: 60px;
+  border: none;
+  padding: 15px;
+  box-shadow: 2px 2px 15px 5px #b1b1b133;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: #ffffff;
+  transition: 1s;
+}
+
+.col2 button:hover {
+  transform: translatey(8px);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.col2 button span {
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+  border-radius: 20px;
+  background-color: #fffffff8;
+}
+
+.col2 button img {
+  width: 35px;
+  height: auto;
 }
 
 #news {
-  width: 60%;
-  margin: 20px;
+  width: 100%;
   grid-area: news;
-  background-color: rgb(166, 255, 0);
-  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+#news h2 {
+  font-size: 40px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+#news .container-news {
+  width: 80%;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+#news .btn {
+  width: 200px;
+  height: 60px;
+  margin-bottom: 20px;
+  background-color: #bbfd57;
+  border-radius: 60px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 100px;
+  transition: 1s;
+}
+
+#news .btn:hover {
+  transform: translatey(8px);
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: #00000075;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+.btn img{
+  width: 35px;
+  height: auto;
+}
+
+#news .container-news h3{
+  background-color: #e1ffb4;
+  width: fit-content;
+  font-size: 22px;
+}
+
+
+#news .container-news a{
+  color: #000000;
+}
+
+#news .container-news a:hover{
+  text-decoration: solid 1.5px underline;
+}
+
+.divisore{
+  height: 3px;
+  background-color: #000000;
+  border: none;
 }
 
 .footer {
-  width: 60%;
-  margin: 20px;
+  width: 80%;
   grid-area: footer;
-  background-color: rgb(166, 255, 0);
-  border-radius: 40px;
+  background-color: #ffffff;
+  border-radius: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 30px;
+  box-shadow: 2px 2px 15px 10px #b1b1b133;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer div{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.footer button{
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50px;
+  background-color: #bbfd57;
+  transition: 1s;
+}
+
+.footer button:hover{
+  transform: translatey(8px);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.footer button img{
+  width: 35px;
+  height: auto;
 }

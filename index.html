@@ -6,14 +6,75 @@
     <title>Hacker News</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="assets/js/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
-        <div class="header">
+      <div class="header">
+        <nav>
+          <a href="index.html">
+            <img class="logo" src="assets/img/logo.png" alt="Logo Hacker News" />
+          </a>
+          <a class="menu" href="#home">Home</a>
+          <a class="menu" href="#news">News</a>
+        </nav>
+        <button>
+          Contact Us
+          <span
+            ><img src="assets/img/iconaLettera.png" alt="Icona Lettera"
+          /></span>
+        </button>
+      </div>
+      <div id="home">
+        <div class="col1">
+          <h1><mark>Hacker News </mark></h1>
+          <h1><mark>Updated every minute</mark></h1>
         </div>
-        <div id="home"></div>
-        <div id="news"></div>
-        <div class="footer"></div>
+        <div class="col2">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+            consequatur cumque voluptates, aspernatur mollitia maxime sint sequi
+            nostrum repellat iusto dolores porro quibusdam. Neque enim velit
+            officia reprehenderit, veritatis maxime. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quibusdam, impedit consectetur tempora
+            culpa natus debitis voluptatum inventore totam illum voluptatem
+            exercitationem aut id earum nisi saepe quaerat consequatur quidem
+            architecto.
+          </p>
+          <a class="link-freccia" href="#news"><button>
+            Scopri di più
+            <span
+              ><img
+                src="assets/img/iconaFreccia.png"
+                alt="Icona freccia giu"
+            /></span>
+          </button></a>
+        </div>
+      </div>
+      <div id="news">
+        <h2>News</h2>
+        <div class="container-news"></div>
+        <button class="btn">
+          Load more <img src="assets/img/loadmore.png" alt="Icona Piu" />
+        </button>
+      </div>
+      <div class="footer">
+        <a href="index.html"><img class="logo" src="assets/img/logo.png" alt="Logo Hacker News" /></a>
+        <nav>
+          <a class="menu" href="#home">Home</a>
+          <a class="menu" href="#news">News</a>
+        </nav>
+        <div>
+          <button><img src="assets/img/iconaGithub.png" alt="Icona Github" /></button>
+          <button><img src="assets/img/iconaInstagram.png" alt="Icona Instagram" /></button>
+          <button><img src="assets/img/iconaLinkedin.png" alt="Icona Linkedin" /></button>
+        </div>
+      </div>
     </div>
   </body>
 </html>
