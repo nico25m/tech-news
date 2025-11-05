@@ -312,7 +312,7 @@ nav .menu:hover {
 
 .logo-f {
   width: 70px;
-  height: auto;
+  height: auto; 
 }
 
 @media (320px <= width <= 1265px) {
