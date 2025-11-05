@@ -197,6 +197,7 @@ form button {
   transition: 1s;
   font-size: large;
   margin-top: 20px;
+  color: #000000;
 }
 
 form button:hover {
@@ -280,28 +281,12 @@ form button:hover {
     color: #ffffff;
   }
 
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    font-size: x-large;
-  }
-
   form input {
     width: 100%;
   }
 
   form textarea {
     width: 100%;
-    border: none;
-    border-bottom: #000000 solid 2px;
-    font-size: 16px;
-    padding-left: 10px;
-    transition: 0.5s;
-    margin-top: 10px;
   }
 
   form button {
