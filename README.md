@@ -2,7 +2,7 @@
 
 This project aims to display tech news from Hacker News using data fetched from the Hacker News API.
 
-## Screenshoot
+## Screenshot
 
 <img src="Homepage.png" width="800" alt="Homepage Screenshot">
 <img src="Contactpage.png" width="800" alt="Contact Page Screenshot">
