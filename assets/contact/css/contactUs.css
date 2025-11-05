@@ -291,6 +291,7 @@ form button:hover {
 
   form button {
     width: 150px;
+    color: #000000;
   }
 
   .footer {
