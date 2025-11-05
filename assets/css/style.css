@@ -295,7 +295,7 @@ nav .menu:hover {
   border: none;
   border-radius: 50px;
   background-color: #bbfd57;
-  transition: 1s;
+  transition: 1s; 
 }
 
 .footer button:hover {

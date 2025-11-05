@@ -4,8 +4,8 @@ This project aims to display tech news from Hacker News using data fetched from 
 
 ## Screenshoot
 
-<img src="Homepage.png" width="800" alt="Homepage Screenshot">
-<img src="Contactpage.png" width="800" alt="Contact Page Screenshot">
+<img src="Homepage.png" alt="Homepage Screenshot">
+<img src="Contactpage.png" alt="Contact Page Screenshot">
 
 ## Key Features & Benefits
 
@@ -24,8 +24,8 @@ This project aims to display tech news from Hacker News using data fetched from 
 
 ## Installation & Setup Instructions
 
-1.  **Clone the repository:**
-
+1.  **Clone the repository:** 
+ 
     ```bash
     git clone https://github.com/nico25m/HackerNews.git
     cd HackerNews
