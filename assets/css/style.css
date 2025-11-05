@@ -18,7 +18,7 @@ body {
     "home"
     "news"
     "footer";
-  grid-template-rows: 130px 700px auto 130px;
+  grid-template-rows: 130px 700px auto 150px;
   justify-items: center;
 }
 
@@ -147,7 +147,7 @@ nav .menu:hover {
 }
 
 #home .col2 {
-  width: 30%;
+  width: 35%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -314,7 +314,7 @@ nav .menu:hover {
   height: auto;
 }
 
-@media (320px <= width <= 1024px) {
+@media (320px <= width <= 1265px) {
   * {
     max-width: 100%;
     box-sizing: border-box;
@@ -381,7 +381,7 @@ nav .menu:hover {
   }
 
   .col1 h1 {
-    font-size: 25px;
+    font-size: 22px;
   }
 
   #home .col2 {
