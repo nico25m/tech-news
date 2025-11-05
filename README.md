@@ -99,4 +99,4 @@ Nicolò
 
 🌐 Link al Progetto: https://nico25m.github.io/HackNews/
 
-<!-- 🌐 Link al Progetto webhosted:  -->
+🌐 Link al Progetto webhosted: https://nico-hackernews.netlify.app
