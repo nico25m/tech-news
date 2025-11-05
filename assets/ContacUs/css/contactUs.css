@@ -1,0 +1,336 @@
+* {
+  font-family: "Zalando Sans SemiExpanded", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "contactUs"
+    "footer";
+  grid-template-rows: 130px auto 130px;
+  justify-items: center;
+}
+
+.header {
+  grid-area: header;
+  width: 60%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  margin-top: 40px;
+  padding: 30px;
+  box-shadow: 2px 2px 15px 10px #b1b1b133;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  font-size: 15px;
+}
+
+.logo {
+  width: 65px;
+  height: auto;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  transition: 1s;
+}
+
+nav .menu:hover {
+  background-color: #e1ffb4;
+  cursor: pointer;
+  transform: translateY(-5px);
+  transition: 0.5s;
+}
+
+.header button {
+  height: 60px;
+  background-color: #bbfd57;
+  border-radius: 30px;
+  padding: 15px;
+  border: none;
+  box-shadow: 2px 2px 15px 5px #b1b1b133;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  transition: 1s;
+}
+
+.header button:hover {
+  transform: rotateY(360deg);
+  cursor: pointer;
+  background-color: #00000075;
+  color: #ffffff;
+  transition: 2s;
+}
+
+.header button span {
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  background-color: #ffffff81;
+}
+
+.header button img {
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff13;
+  margin-top: 10px;
+}
+
+.contactUs-btn {
+  text-decoration: none;
+  color: #000000;
+}
+
+#contactUs {
+  width: 100%;
+  grid-area: contactUs;
+  background-color: #ffffff;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  width: 80%;
+  grid-area: footer;
+  background-color: #ffffff;
+  border-radius: 60px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  padding: 30px;
+  box-shadow: 2px 2px 15px 10px #b1b1b133;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+}
+
+form label {
+  font-weight: 600;
+}
+
+mark {
+  padding: 5px;
+  background-color: #e1ffb4;
+}
+
+form input {
+  width: 20%;
+  border: none;
+  border-bottom: #000000 solid 2px;
+  height: 40px;
+  font-size: 16px;
+  padding-left: 10px;
+  transition: 0.5s;
+  margin-top: 10px;
+}
+
+form input:focus {
+  outline: none;
+  border-bottom: #bbfd57 solid 2px;
+  font-size: 16px;
+  padding-left: 10px;
+  transform: translateY(-2px);
+  transition: 0.5s;
+}
+
+form textarea {
+  width: 20%;
+  border: none;
+  border-bottom: #000000 solid 2px;
+  font-size: 16px;
+  padding-left: 10px;
+  transition: 0.5s;
+  margin-top: 10px;
+}
+
+form textarea:focus {
+  outline: none;
+  border-bottom: #bbfd57 solid 2px;
+  font-size: 16px;
+  padding-left: 10px;
+  transform: translateY(-2px);
+  transition: 0.5s;
+}
+
+form button {
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  background-color: #bbfd57;
+  transition: 1s;
+  font-size: large;
+  margin-top: 20px;
+}
+
+form button:hover {
+  transform: translatey(8px);
+  cursor: pointer;
+  transition: 1s;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.footer div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.footer button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  background-color: #bbfd57;
+  transition: 1s;
+}
+
+.footer button:hover {
+  transform: translatey(8px);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.footer button img {
+  width: 35px;
+  height: auto;
+}
+
+.logo-f {
+  width: 70px;
+  height: auto;
+}
+
+@media (320px <= width <= 1024px) {
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .container {
+    grid-template-rows: auto auto auto auto;
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .header {
+    width: 90%;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  nav {
+    flex-direction: row;
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  .logo {
+    width: 60px;
+    margin-right: 10px;
+  }
+
+  .header button {
+    width: 50%;
+    justify-content: center;
+    font-size: 14px;
+    color: #000000;
+  }
+
+  .header button:hover {
+    color: #ffffff;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+  }
+
+  form input {
+    width: 100%;
+  }
+
+  form textarea {
+    width: 100%;
+    border: none;
+    border-bottom: #000000 solid 2px;
+    font-size: 16px;
+    padding-left: 10px;
+    transition: 0.5s;
+    margin-top: 10px;
+  }
+
+  form button {
+    width: 150px;
+  }
+
+  .footer {
+    width: 95%;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .logo-f {
+    width: 60px;
+  }
+
+  .footer nav {
+    flex-direction: row;
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  .footer div {
+    justify-content: center;
+  }
+
+  .footer button {
+    width: 45px;
+    height: 45px;
+  }
+}

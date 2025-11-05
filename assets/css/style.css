@@ -100,6 +100,11 @@ nav .menu:hover {
   margin-top: 10px;
 }
 
+.contactUs{
+  text-decoration: none;
+  color: #000000;
+}
+
 #home {
   width: 80%;
   grid-area: home;
@@ -112,7 +117,7 @@ nav .menu:hover {
   box-shadow: 2px 2px 15px 10px #b1b1b133;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   gap: 50px;
   padding: 20px;
@@ -123,7 +128,7 @@ nav .menu:hover {
 }
 
 #home .col1 {
-  width: 40%;
+  width: 50%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -142,14 +147,15 @@ nav .menu:hover {
 }
 
 #home .col2 {
-  width: 50%;
+  width: 30%;
   height: auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  font-size: 18px;
+  font-size: 20px;
   text-align: left;
-  margin-right: 20px;
+  margin-right: 40px;
+  margin-top: 60px;
 }
 
 .col2 button {
@@ -303,17 +309,19 @@ nav .menu:hover {
   height: auto;
 }
 
-/* Aggiungi questo alla fine del tuo file CSS esistente */
+.logo-f {
+  width: 70px;
+  height: auto;
+}
 
 @media (320px <= width <= 1024px) {
-   * {
-    max-width: 100%; 
+  * {
+    max-width: 100%;
     box-sizing: border-box;
   }
 
- 
   .container {
-    grid-template-rows: auto auto auto auto; 
+    grid-template-rows: auto auto auto auto;
     width: 100%;
     padding: 0 15px;
   }
@@ -333,12 +341,12 @@ nav .menu:hover {
   }
 
   .logo {
-    width: 60px; 
+    width: 60px;
     margin-right: 10px;
   }
 
   .header button {
-    width: 50%;  
+    width: 50%;
     justify-content: center;
     font-size: 14px;
     color: #000000;
@@ -348,10 +356,16 @@ nav .menu:hover {
     color: #ffffff;
   }
 
-  /* Home: cambia a layout verticale, adatta colonne */
+  .contactUs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
   #home {
     width: 95%;
-    flex-direction: column; /* Stack verticale */
+    flex-direction: column;
     gap: 30px;
     padding: 20px;
     margin-top: 20px;
@@ -362,27 +376,28 @@ nav .menu:hover {
   #home .col1 {
     width: 100%;
     margin-left: 0;
-    text-align: center; /* Centra testo per mobile */
+    margin-top: 20px;
+    text-align: center;
   }
 
   .col1 h1 {
-    font-size: 22px; /* Riduci font per mobile */
+    font-size: 25px;
   }
 
   #home .col2 {
     width: 100%;
     margin-right: 0;
-    text-align: center; /* Centra testo */
-    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 16px;
   }
 
   .col2 button {
-    width: 100%; /* Button a larghezza piena */
+    width: 100%;
     justify-content: center;
     font-size: 14px;
   }
 
-  /* News: adatta container e gestisci contenuto dinamico */
   #news {
     width: 100%;
     margin-top: 40px;
@@ -403,13 +418,7 @@ nav .menu:hover {
     box-sizing: border-box;
   }
 
-  #news .container-news h3 {
-    max-width: 100%;
-  }
-  #news .container-news a {
-    max-width: 100%;
-  }
-  #news .container-news p {
+  #news .container-news * {
     max-width: 100%;
   }
 
@@ -426,13 +435,13 @@ nav .menu:hover {
 
   .footer {
     width: 95%;
-    flex-direction: column; 
+    flex-direction: column;
     gap: 20px;
     text-align: center;
   }
 
   .logo-f {
-    width: 60px; 
+    width: 60px;
   }
 
   .footer nav {
@@ -446,10 +455,7 @@ nav .menu:hover {
   }
 
   .footer button {
-    width: 45px; 
+    width: 45px;
     height: 45px;
   }
-
-
- 
 }
