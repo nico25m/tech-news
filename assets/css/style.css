@@ -387,6 +387,7 @@ nav .menu:hover {
     width: 100%;
     margin-top: 40px;
     max-width: 100%;
+    word-break: break-all;
   }
 
   #news h2 {
