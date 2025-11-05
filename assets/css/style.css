@@ -1,5 +1,6 @@
 * {
   font-family: "Zalando Sans SemiExpanded", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -117,7 +118,7 @@ nav .menu:hover {
   padding: 20px;
 }
 
-.link-freccia{
+.link-freccia {
   text-decoration: none;
 }
 
@@ -236,27 +237,26 @@ nav .menu:hover {
   transition: 0.5s;
 }
 
-.btn img{
+.btn img {
   width: 35px;
   height: auto;
 }
 
-#news .container-news h3{
+#news .container-news h3 {
   background-color: #e1ffb4;
   width: fit-content;
   font-size: 22px;
 }
 
-
-#news .container-news a{
+#news .container-news a {
   color: #000000;
 }
 
-#news .container-news a:hover{
+#news .container-news a:hover {
   text-decoration: solid 1.5px underline;
 }
 
-.divisore{
+.divisore {
   height: 3px;
   background-color: #000000;
   border: none;
@@ -277,28 +277,195 @@ nav .menu:hover {
   align-items: center;
 }
 
-.footer div{
+.footer div {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 10px;
 }
 
-.footer button{
-  width: 60px;
-  height: 60px;
+.footer button {
+  width: 50px;
+  height: 50px;
   border: none;
   border-radius: 50px;
   background-color: #bbfd57;
   transition: 1s;
 }
 
-.footer button:hover{
+.footer button:hover {
   transform: translatey(8px);
   cursor: pointer;
   transition: 0.5s;
 }
 
-.footer button img{
+.footer button img {
   width: 35px;
   height: auto;
+}
+
+/* Aggiungi questo alla fine del tuo file CSS esistente */
+
+@media (380px <= width <= 1000px) {
+
+  /* Container principale: adatta il grid per dispositivi mobili, rimuovi altezze fisse per permettere contenuto dinamico */
+  .container {
+    grid-template-rows: auto auto auto auto; /* Rimuovi altezze fisse per permettere espansione verticale */
+    width: 100%;
+    padding: 0 10px; /* Aggiungi padding laterale per evitare bordi stretti */
+  }
+
+  /* Header: riduci larghezza, adatta nav e button per mobile */
+  .header {
+    width: 95%;
+    flex-direction: column; /* Stack verticale per nav e button */
+    gap: 20px;
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  nav {
+    flex-direction: row; /* Mantieni orizzontale, ma riduci gap */
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  .logo {
+    width: 60px; /* Riduci logo per risparmiare spazio */
+    margin-right: 10px;
+  }
+
+  .header button {
+    width: 50%; /* Button a larghezza piena */
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  /* Home: cambia a layout verticale, adatta colonne */
+  #home {
+    width: 95%;
+    flex-direction: column; /* Stack verticale */
+    gap: 30px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  #home .col1 {
+    width: 100%;
+    margin-left: 0;
+    text-align: center; /* Centra testo per mobile */
+  }
+
+  .col1 h1 {
+    font-size: 25px; /* Riduci font per mobile */
+  }
+
+  #home .col2 {
+    width: 100%;
+    margin-right: 0;
+    text-align: center; /* Centra testo */
+    font-size: 16px;
+  }
+
+  .col2 button {
+    width: 100%; /* Button a larghezza piena */
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  /* News: adatta container e gestisci contenuto dinamico */
+  #news {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  #news h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+   #news .container-news {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* Taglia overflow orizzontale come ultima risorsa */
+  }
+  /* Applica wrap forzato a tutti gli elementi delle news caricate dinamicamente */
+  .news-item {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .news-item * {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word; /* Fallback per browser vecchi */
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+/* Assicurati che gli elementi specifici gestiscano bene il wrap */
+#news .container-news h3 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+#news .container-news a {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  display: inline; /* Mantieni inline per permettere wrap naturale, ma limita larghezza */
+}
+#news .container-news p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+  .divisore {
+    width: 100%;
+    max-width: 100%;
+  }
+
+   body, .container {
+    overflow-x: hidden;
+  }
+
+  #news .btn {
+    width: 90%; /* Button più largo ma non pieno */
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+
+  /* Footer: adatta per mobile */
+  .footer {
+    width: 95%;
+    flex-direction: column; /* Stack verticale */
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer nav {
+    flex-direction: row;
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  .footer div {
+    justify-content: center;
+  }
+
+  .footer button {
+    width: 45px; /* Riduci leggermente */
+    height: 45px;
+  }
+
+  /* Generale per evitare overflow orizzontale */
+  * {
+    max-width: 100%; /* Nessun elemento supera la larghezza del contenitore */
+    box-sizing: border-box;
+  }
+
+  /* Immagini: assicurati che non superino la larghezza */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }

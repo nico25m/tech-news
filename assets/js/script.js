@@ -55,13 +55,13 @@ async function loadMoreNews() {
   }
 }
 
-function renderNews(news) {
+async function renderNews(news) {
   try {
     const container = document.querySelector(".container-news");
     const div = document.createElement("div");
     div.classList.add("news-item");
 
-    div.innerHTML = `
+     div.innerHTML = `
       <h3>${news.title}</h3>
       <a href="${news.url || "index.html"}" target="_blank">${
       news.url || "Link non disponibile"
