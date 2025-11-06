@@ -17,18 +17,18 @@ This project aims to display tech news from Hacker News using data fetched from 
 
 ## Structure of the project
 
-  HackerNews/
-          assets/
-              contact/
-                   contactus.html
-                   css/
-                     contactUs.css
-              css/
+  -HackerNews/
+          -assets/
+              -contact/
+                   -contactus.html
+                   -css/
+                      contactUs.css
+              -css/
                 style.css
-              js/
-                script.js
-              img/
-          index.html
+              -js/
+                 script.js
+              -img/
+          -index.html
                    
                 
 ## Prerequisites & Dependencies
