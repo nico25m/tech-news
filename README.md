@@ -90,10 +90,6 @@ async function dettagliNews(id) {
 }
 ```
 
-## Configuration Options
-
-There are no configurable settings as of now. The project is designed to fetch data directly from the Hacker News API without requiring any API keys or special configurations.
-
 ## License Information
 
 License not specified. All rights reserved by the owner.
