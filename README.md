@@ -16,20 +16,20 @@ This project aims to display tech news from Hacker News using data fetched from 
 - **Contact Us Page:**  A dedicated page for users to reach out with inquiries or feedback.
 
 ## Structure of the project
-
-  -HackerNews/
-          -assets/
-              -contact/
-                   -contactus.html
-                   -css/
-                      contactUs.css
-              -css/
+```bash
+  HackerNews/
+          assets/
+              contact/
+                   contactus.html
+                   css/
+                     contactUs.css
+              css/
                 style.css
-              -js/
+              js/
                  script.js
-              -img/
-          -index.html
-                   
+              img/
+          index.html
+```                   
                 
 ## Prerequisites & Dependencies
 
