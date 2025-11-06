@@ -97,6 +97,6 @@ Nicolò
 
 💼 LinkedIn: https://linkedin.com/in/nicolò-melzi
 
-🌐 Link al Progetto: https://nico25m.github.io/HackNews/
+🌐 Link of the project: https://nico25m.github.io/HackNews/
 
-🌐 Link al Progetto webhosted: https://nico-hackernews.netlify.app
+🌐 Link of the project webhosted: https://nico-hackernews.netlify.app
