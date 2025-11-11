@@ -205,6 +205,14 @@ nav .menu:hover {
   margin-top: 80px;
 }
 
+.loader {
+  display: none;
+  font-size: 18px;
+  margin: 20px 0;
+  color: #000000;
+  transition: 1s;
+}
+
 #news h2 {
   font-size: 40px;
   margin: 0;
@@ -263,7 +271,7 @@ nav .menu:hover {
   text-decoration: solid 1.5px underline;
 }
 
-.divisore {
+.divisor {
   height: 3px;
   background-color: #000000;
   border: none;

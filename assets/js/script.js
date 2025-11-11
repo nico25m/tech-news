@@ -1,75 +1,84 @@
-async function newsId() {
-  try {
-    const urlApi = await fetch(
-      "https://hacker-news.firebaseio.com/v0/newstories.json"
-    );
-    if (!urlApi.ok) throw new Error("Errore nel recupero degli ID delle news");
-    return await urlApi.json();
-  } catch (e) {
-    console.log("Errore:", e.message);
-  }
+async function getNewsIds() {
+  const response = await fetch("https://hacker-news.firebaseio.com/v0/newstories.json");
+  if (!response.ok) throw new Error("Failed to fetch news IDs");
+  return response.json();
 }
 
-async function dettagliNews(id) {
-  try {
-    const urlApi = await fetch(
-      `https://hacker-news.firebaseio.com/v0/item/${id}.json`
-    );
-    if (!urlApi.ok) throw new Error(`Errore nel recupero della news con ID ${id}`);
-    return await urlApi.json();
-  } catch (e) {
-    console.log(`Errore:`, e.message);
-  }
+async function getNewsDetails(id) {
+  const response = await fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`);
+  if (!response.ok) throw new Error(`Failed to fetch news with ID ${id}`);
+  return response.json();
 }
 
-let allId = [];
-let i = 0;
+let allIds = [];
+let index = 0;
 
-async function caricamentoNews() {
-  try {
-    allId = await newsId();
-    if (allId.length === 0) return;
-    loadMore();
-  } catch (e) {
-    console.log("Errore loadInitialNews:", e.message);
-  }
-}
+const loader = document.getElementById("loader");
+const container = document.querySelector(".container-news");
+const loadMoreButton = document.querySelector(".btn");
 
-async function loadMore() {
+async function loadInitialNews() {
   try {
-    const idToLoad = allId.slice(i, i + 10);
-    for (const id of idToLoad) {
-      const news = await dettagliNews(id);
-      News(news);
+    showLoader(true);
+    allIds = await getNewsIds();
+    if (allIds.length > 0) {
+      await loadMoreNews();
     }
-    i += 10;
-  } catch (e) {
-    console.error("Errore:", e.message);
+  } catch (error) {
+    console.error("Error:", error.message);
+    loader.textContent = "Error loading news.";
   }
 }
 
-async function News(news) {
+async function loadMoreNews() {
   try {
-    const container = document.querySelector(".container-news");
-    const div = document.createElement("div");
+    showLoader(true);
+    container.style.display = "none"; 
 
-     div.innerHTML =
-      `<h3>
-        ${news.title}
-      </h3>
-      <a href="${news.url || "index.html"}" target="_blank">
-        ${news.url || "Link non disponibile"}
-      </a>
-      <p>
-        ${new Date(news.time * 1000).toLocaleString() || "Data non disponibile"}
-      </p>
-      <hr class="divisore"/>`;
+    const idsToLoad = allIds.slice(index, index + 10);
+    const newsElements = [];
 
-    container.appendChild(div);
-  } catch (e) {
-    console.log("Errore:", e.message);
+    for (const id of idsToLoad) {
+      const news = await getNewsDetails(id);
+      if (!news) continue;
+
+      const div = document.createElement("div");
+
+      const title = document.createElement("h3");
+      title.textContent = news.title;
+
+      const link = document.createElement("a");
+      link.href = news.url || "#";
+      link.target = "_blank";
+      link.textContent = news.url || "Link not available";
+
+      const date = document.createElement("p");
+      date.textContent = new Date(news.time * 1000).toLocaleString() || "No date available";
+
+      const hr = document.createElement("hr");
+      hr.classList.add("divisor");
+
+      div.appendChild(title);
+      div.appendChild(link);
+      div.appendChild(date);
+      div.appendChild(hr);
+
+      newsElements.push(div);
+    }
+
+    newsElements.forEach(el => container.appendChild(el));
+
+    container.style.display = "block";
+  } catch (error) {
+    console.error("Error loading batch:", error.message);
+  } finally {
+    showLoader(false);
   }
 }
 
-document.addEventListener("DOMContentLoaded", caricamentoNews);
-document.querySelector(".btn").addEventListener("click", loadMore);
+function showLoader(show) {
+  loader.style.display = show ? "block" : "none";
+}
+
+document.addEventListener("DOMContentLoaded", loadInitialNews);
+loadMoreButton.addEventListener("click", loadMoreNews);
